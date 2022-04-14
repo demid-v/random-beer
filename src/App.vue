@@ -1,19 +1,15 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <div id="app"><Profile /><Beer /></div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Profile from "./components/Profile.vue";
+import Beer from "./components/Beer.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { Profile, Beer },
+};
 </script>
 
 <style>
@@ -21,8 +17,15 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.info > div:not {
+  margin-bottom: 0.6em;
 }
 </style>
